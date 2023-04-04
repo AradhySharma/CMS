@@ -1,0 +1,33 @@
+{
+  "name": "cms",
+  "version": "1.0.0",
+  "description": "PRD: Max CMS(content management system)\r Mentor: Asit Prakash\r Assigned to: Aradhy Sharma\r Overview:\r The CMS tool is a content management system designed to allow users of the same company to manage different types of content such as text, email, image, audio, and video. The tool provides various features such as authentication, drafting, publishing, and more to simplify the content management process.",
+  "main": "./backend/server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AradhySharma/CMS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AradhySharma/CMS/issues"
+  },
+  "homepage": "https://github.com/AradhySharma/CMS#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
