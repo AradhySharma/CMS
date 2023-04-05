@@ -4,7 +4,9 @@
   "description": "PRD: Max CMS(content management system)\r Mentor: Asit Prakash\r Assigned to: Aradhy Sharma\r Overview:\r The CMS tool is a content management system designed to allow users of the same company to manage different types of content such as text, email, image, audio, and video. The tool provides various features such as authentication, drafting, publishing, and more to simplify the content management process.",
   "main": "./backend/server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build" : "npm i"
+
   },
   "repository": {
     "type": "git",
