@@ -7,6 +7,8 @@ const {isValidObjectId} = mongoose;
 exports.authentication2 = async function(req, res, next){
         // Get the token from the request header
         const token = req.header('x-api-key');
+        console.log(token)
+        console.log("lucky")
 
         // If token not provided, return error
         if (!token) {

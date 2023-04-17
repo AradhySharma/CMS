@@ -83,8 +83,8 @@ exports.loginUser = async function(req,res){
     }
     let token = jwt.sign({userId:user._id.toString()},"Secretkey")
 
-    res.setHeader("x-api-key", token);
-    return res.status(200).send({status:true, message:"logged in successfuly"});
+    // res.setHeader("x-api-key", token);
+    return res.status(200).send({status:true, message:"logged in successfuly", "x-api-key": token});
 }catch(error){
     return res.status(500).send({status:false, msg:error.message});
 }
@@ -196,11 +196,14 @@ exports.updateUser = async function (req, res) {
     
     if (name) user.name = name;
   
+  if(email){
     let duplicateEmail = await userModel.findOne({ email: email });
     if (duplicateEmail){ return res.status(400).send({ status: false, message: "this email already exists" });
     }else{
         user.email = email;
     }
+    }
+    
   
     if (password) {
         let hash = await bcrypt.hash(password, 10);

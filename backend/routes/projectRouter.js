@@ -18,7 +18,7 @@ projectRouter.post("/add-team/:projectId",authentication2,addTeam);
 // //getProjectsById
  projectRouter.get("/get-project-by-id/:projectId",authentication2, getProjectsById);
 //delete-Project
-projectRouter.put("/delete-project/:projectId",authentication2, deleteProject);
+projectRouter.delete("/delete-project/:projectId",authentication2, deleteProject);
 
 
 

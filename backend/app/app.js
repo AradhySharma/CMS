@@ -13,6 +13,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors())
 app.use( multer().any())
+app.use(express.urlencoded())
 
 //=======Routes======
 //========User=======
