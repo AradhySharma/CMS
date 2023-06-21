@@ -20,11 +20,6 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  role: {
-    type: String,
-    enum: ['VIEWER', 'EDITOR', 'PUBLISHER', 'ADMIN', 'SUPERADMIN'],
-    default: 'VIEWER',
-  },
   secretQuestion:{
     question:{
       type:String,

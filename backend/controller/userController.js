@@ -83,7 +83,7 @@ exports.loginUser = async function(req,res){
     }
     let token = jwt.sign({userId:user._id.toString()},"Secretkey")
 
-    // res.setHeader("x-api-key", token);
+    res.setHeader("x-api-key", token);
     return res.status(200).send({status:true, message:"logged in successfuly", "x-api-key": token});
 }catch(error){
     return res.status(500).send({status:false, msg:error.message});
